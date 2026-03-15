@@ -1,0 +1,175 @@
+/* --------------------------
+
+<head>
+    <link rel="stylesheet" href="">
+</head>
+   Palette de couleurs
+---------------------------*/
+:root {
+    --primary-color: #ff6347;      /* Rouge/orangé vif pour boutons et accents */
+    --secondary-color: #333;       /* Texte et header/footer */
+    --background-color: #fdf6f0;  /* Fond clair général */
+    --card-background: #fff;       /* Fond des cartes produits */
+    --hover-color: #e5533d;        /* Hover boutons */
+    --text-color: #222;            /* Couleur texte principale */
+    --muted-text: #666;            /* Texte secondaire / description */
+}
+
+/* --------------------------
+   Global
+---------------------------*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --------------------------
+   Header
+---------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --------------------------
+   Hero / Bannière
+---------------------------*/
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('https://via.placeholder.com/1200x400.png?text=Art+Hero') no-repeat center/cover;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* --------------------------
+   Produits
+---------------------------*/
+.products {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    color: var(--muted-text);
+    font-weight: bold;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: var(--primary-color);
+}
+
+/* --------------------------
+   Footer
+---------------------------*/
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
